@@ -8,6 +8,7 @@
   100% {
     opacity: 1;
   }
+}
 
 .fade-in {
   animation: fadeIn 0.5s ease-in-out forwards;
@@ -23,6 +24,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
 
 .slide-in {
   animation: slideIn 0.5s ease-in-out forwards;
