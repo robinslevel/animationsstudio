@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animation Library — Gallery</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../library/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">AnimLib</h1>
+      <nav class="nav">
+        <a href="index.html" class="active">Gallery</a>
+        <a href="playground.html">Playground</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="controls-row">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search animations, tags, categories..." />
+      </div>
+      <div>
+        <label for="categorySelect" class="label">Category</label>
+        <select id="categorySelect"><option value="all">All</option></select>
+      </div>
+      <div id="reducedMotionBanner" class="reduced-banner" hidden>
+        <label><input id="allowMotionToggle" type="checkbox" /> Allow motion previews</label>
+      </div>
+    </section>
+
+    <section id="gallery" class="grid" aria-live="polite">
+      <!-- cards populated by app.js -->
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <h2 id="modalTitle">Animation</h2>
+        <button id="modalClose" class="btn" title="Close">✕</button>
+      </header>
+
+      <div class="modal-body">
+        <div class="preview-area">
+          <div id="modalPreview" class="preview-box">Preview</div>
+        </div>
+
+        <form id="controlsForm" class="controls-form" onsubmit="return false;">
+          <div class="control-row">
+            <label>Duration (ms)<input id="cDuration" type="number" min="0" /></label>
+            <label>Delay (ms)<input id="cDelay" type="number" min="0" /></label>
+            <label>Easing
+              <select id="cEasing">
+                <option>ease</option><option>ease-in</option><option>ease-out</option><option>ease-in-out</option><option>linear</option><option value="custom">custom</option>
+              </select>
+            </label>
+            <input id="cEasingCustom" class="hidden small-input" placeholder="cubic-bezier(...)" />
+          </div>
+
+          <div class="control-row">
+            <label>Iterations <input id="cIterations" type="number" min="1" /></label>
+            <label>Direction
+              <select id="cDirection">
+                <option>normal</option><option>reverse</option><option>alternate</option><option>alternate-reverse</option>
+              </select>
+            </label>
+            <label>Fill mode
+              <select id="cFill">
+                <option>none</option><option>forwards</option><option>backwards</option><option>both</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="control-actions">
+            <button id="modalReplay" class="btn primary">Replay</button>
+            <button id="modalCopyCss" class="btn">Copy CSS</button>
+            <button id="modalDownloadCss" class="btn">Download CSS</button>
+            <button id="modalCopyShare" class="btn">Copy Share Link</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer wrap">
+    <small>Animation library — Vanilla HTML/CSS/JS</small>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animation Library — Playground</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="../library/animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">AnimLib</h1>
+      <nav class="nav">
+        <a href="index.html">Gallery</a>
+        <a href="playground.html" class="active">Playground</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="controls-row">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search animations..." />
+      </div>
+      <div>
+        <label for="categorySelect" class="label">Category</label>
+        <select id="categorySelect"><option value="all">All</option></select>
+      </div>
+    </section>
+
+    <section id="playground" class="playground">
+      <div class="preview-area">
+        <div id="playgroundPreview" class="preview-box">Preview Area</div>
+      </div>
+
+      <form id="playgroundControls" class="controls-form" onsubmit="return false;">
+        <div class="control-row">
+          <label>Duration (ms)<input id="pDuration" type="number" min="0" /></label>
+          <label>Delay (ms)<input id="pDelay" type="number" min="0" /></label>
+          <label>Easing
+            <select id="pEasing">
+              <option>ease</option><option>ease-in</option><option>ease-out</option><option>ease-in-out</option><option>linear</option><option value="custom">custom</option>
+            </select>
+          </label>
+          <input id="pEasingCustom" class="hidden small-input" placeholder="cubic-bezier(...)" />
+        </div>
+
+        <div class="control-row">
+          <label>Iterations <input id="pIterations" type="number" min="1" /></label>
+          <label>Direction
+            <select id="pDirection">
+              <option>normal</option><option>reverse</option><option>alternate</option><option>alternate-reverse</option>
+            </select>
+          </label>
+          <label>Fill mode
+            <select id="pFill">
+              <option>none</option><option>forwards</option><option>backwards</option><option>both</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="control-actions">
+          <button id="playgroundPreviewBtn" class="btn primary">Preview</button>
+          <button id="playgroundCopyCss" class="btn">Copy CSS</button>
+          <button id="playgroundDownloadCss" class="btn">Download CSS</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <small>Animation library — Vanilla HTML/CSS/JS</small>
+  </footer>
+
+  <script type="module" src="js/playground.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Fade In",
+    "category": "Entrance",
+    "cssClass": "fade-in",
+    "description": "Fades the element in from transparent to opaque.",
+    "duration": 500,
+    "easing": "ease-in"
+  },
+  {
+    "name": "Slide Up",
+    "category": "Entrance",
+    "cssClass": "slide-up",
+    "description": "Slides the element up into view.",
+    "duration": 700,
+    "easing": "ease-out"
+  },
+  {
+    "name": "Bounce",
+    "category": "Attention Seekers",
+    "cssClass": "bounce",
+    "description": "Bounces the element up and down.",
+    "duration": 600,
+    "easing": "ease-in-out"
+  },
+  {
+    "name": "Rotate",
+    "category": "Attention Seekers",
+    "cssClass": "rotate",
+    "description": "Rotates the element 360 degrees.",
+    "duration": 800,
+    "easing": "linear"
+  },
+  {
+    "name": "Zoom In",
+    "category": "Entrance",
+    "cssClass": "zoom-in",
+    "description": "Zooms the element in from a smaller size.",
+    "duration": 500,
+    "easing": "ease-in"
+  },
+  {
+    "name": "Shake",
+    "category": "Attention Seekers",
+    "cssClass": "shake",
+    "description": "Shakes the element back and forth.",
+    "duration": 400,
+    "easing": "ease-in-out"
+  },
+  {
+    "name": "Fade Out",
+    "category": "Exit",
+    "cssClass": "fade-out",
+    "description": "Fades the element out to transparent.",
+    "duration": 500,
+    "easing": "ease-out"
+  },
+  {
+    "name": "Slide Down",
+    "category": "Exit",
+    "cssClass": "slide-down",
+    "description": "Slides the element down out of view.",
+    "duration": 700,
+    "easing": "ease-in"
+  }
+]
