@@ -1,66 +1,194 @@
 [
   {
+    "id": "fade-in",
     "name": "Fade In",
-    "category": "Entrance",
-    "cssClass": "fade-in",
-    "description": "Fades the element in from transparent to opaque.",
-    "duration": 500,
-    "easing": "ease-in"
+    "category": "Entrances",
+    "tags": ["fade", "opacity", "entrance"],
+    "className": "animlib-fade-in",
+    "keyframesName": "animlib-fade-in",
+    "defaults": {
+      "durationMs": 700,
+      "delayMs": 0,
+      "easing": "ease-out",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
   },
   {
+    "id": "slide-up",
     "name": "Slide Up",
-    "category": "Entrance",
-    "cssClass": "slide-up",
-    "description": "Slides the element up into view.",
-    "duration": 700,
-    "easing": "ease-out"
+    "category": "Entrances",
+    "tags": ["slide", "up", "translateY"],
+    "className": "animlib-slide-up",
+    "keyframesName": "animlib-slide-up",
+    "defaults": {
+      "durationMs": 600,
+      "delayMs": 80,
+      "easing": "cubic-bezier(.2,.8,.2,1)",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
   },
   {
-    "name": "Bounce",
-    "category": "Attention Seekers",
-    "cssClass": "bounce",
-    "description": "Bounces the element up and down.",
-    "duration": 600,
-    "easing": "ease-in-out"
-  },
-  {
-    "name": "Rotate",
-    "category": "Attention Seekers",
-    "cssClass": "rotate",
-    "description": "Rotates the element 360 degrees.",
-    "duration": 800,
-    "easing": "linear"
-  },
-  {
-    "name": "Zoom In",
-    "category": "Entrance",
-    "cssClass": "zoom-in",
-    "description": "Zooms the element in from a smaller size.",
-    "duration": 500,
-    "easing": "ease-in"
-  },
-  {
-    "name": "Shake",
-    "category": "Attention Seekers",
-    "cssClass": "shake",
-    "description": "Shakes the element back and forth.",
-    "duration": 400,
-    "easing": "ease-in-out"
-  },
-  {
-    "name": "Fade Out",
-    "category": "Exit",
-    "cssClass": "fade-out",
-    "description": "Fades the element out to transparent.",
-    "duration": 500,
-    "easing": "ease-out"
-  },
-  {
+    "id": "slide-down",
     "name": "Slide Down",
-    "category": "Exit",
-    "cssClass": "slide-down",
-    "description": "Slides the element down out of view.",
-    "duration": 700,
-    "easing": "ease-in"
+    "category": "Exits",
+    "tags": ["slide", "down", "exit"],
+    "className": "animlib-slide-down",
+    "keyframesName": "animlib-slide-down",
+    "defaults": {
+      "durationMs": 700,
+      "delayMs": 0,
+      "easing": "ease-in-out",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "forwards"
+    }
+  },
+  {
+    "id": "scale-pulse",
+    "name": "Scale Pulse",
+    "category": "Attention",
+    "tags": ["scale", "pulse", "zoom"],
+    "className": "animlib-scale-pulse",
+    "keyframesName": "animlib-scale-pulse",
+    "defaults": {
+      "durationMs": 500,
+      "delayMs": 0,
+      "easing": "ease-in-out",
+      "iterations": 3,
+      "direction": "alternate",
+      "fillMode": "none"
+    }
+  },
+  {
+    "id": "shake",
+    "name": "Shake",
+    "category": "Attention",
+    "tags": ["shake", "vibrate", "attention"],
+    "className": "animlib-shake",
+    "keyframesName": "animlib-shake",
+    "defaults": {
+      "durationMs": 600,
+      "delayMs": 0,
+      "easing": "ease-in-out",
+      "iterations": 2,
+      "direction": "normal",
+      "fillMode": "none"
+    }
+  },
+  {
+    "id": "wobble",
+    "name": "Wobble",
+    "category": "Attention",
+    "tags": ["wobble", "swing", "emphasis"],
+    "className": "animlib-wobble",
+    "keyframesName": "animlib-wobble",
+    "defaults": {
+      "durationMs": 900,
+      "delayMs": 0,
+      "easing": "cubic-bezier(.34,1.56,.64,1)",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "rotate",
+    "name": "Rotate",
+    "category": "Background",
+    "tags": ["rotate", "spin", "loop"],
+    "className": "animlib-rotate",
+    "keyframesName": "animlib-rotate",
+    "defaults": {
+      "durationMs": 1200,
+      "delayMs": 0,
+      "easing": "linear",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "flip",
+    "name": "Flip",
+    "category": "3D",
+    "tags": ["flip", "rotateX", "card"],
+    "className": "animlib-flip",
+    "keyframesName": "animlib-flip",
+    "defaults": {
+      "durationMs": 700,
+      "delayMs": 0,
+      "easing": "ease-out",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "blur-in",
+    "name": "Blur In",
+    "category": "Entrances",
+    "tags": ["blur", "focus", "entrance"],
+    "className": "animlib-blur-in",
+    "keyframesName": "animlib-blur-in",
+    "defaults": {
+      "durationMs": 550,
+      "delayMs": 0,
+      "easing": "ease",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "pop",
+    "name": "Pop",
+    "category": "Attention",
+    "tags": ["pop", "scale", "entrance"],
+    "className": "animlib-pop",
+    "keyframesName": "animlib-pop",
+    "defaults": {
+      "durationMs": 400,
+      "delayMs": 40,
+      "easing": "cubic-bezier(.2,.9,.3,1.2)",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "bounce",
+    "name": "Bounce",
+    "category": "Attention",
+    "tags": ["bounce", "spring", "jump"],
+    "className": "animlib-bounce",
+    "keyframesName": "animlib-bounce",
+    "defaults": {
+      "durationMs": 800,
+      "delayMs": 0,
+      "easing": "cubic-bezier(.34,1.56,.64,1)",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "both"
+    }
+  },
+  {
+    "id": "text-underline",
+    "name": "Text Underline Sweep",
+    "category": "Text",
+    "tags": ["text", "underline", "reveal"],
+    "className": "animlib-text-underline",
+    "keyframesName": "animlib-text-underline",
+    "defaults": {
+      "durationMs": 450,
+      "delayMs": 0,
+      "easing": "ease",
+      "iterations": 1,
+      "direction": "normal",
+      "fillMode": "forwards"
+    }
   }
 ]

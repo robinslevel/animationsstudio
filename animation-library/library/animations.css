@@ -1,76 +1,234 @@
-/* Animation Library CSS */
+/* Library animations — animlib namespace */
 
-/* Fade In Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* Helper demo element */
+.animlib-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem .9rem;
+  border-radius: .8rem;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06);
+  will-change: transform, opacity, filter;
+  transform-origin: center;
+  perspective: 900px;
 }
 
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out forwards;
+/* Fade In */
+@keyframes animlib-fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animlib-fade-in {
+  animation-name: animlib-fade-in;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-/* Slide In Animation */
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* Slide Up */
+@keyframes animlib-slide-up {
+  0%   { transform: translateY(20px); opacity: 0; }
+  60%  { transform: translateY(-6px); opacity: 0.85; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animlib-slide-up {
+  animation-name: animlib-slide-up;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-.slide-in {
-  animation: slideIn 0.5s ease-in-out forwards;
+/* Slide Down */
+@keyframes animlib-slide-down {
+  0%   { transform: translateY(-18px); opacity: 0; }
+  60%  { transform: translateY(6px); opacity: 0.9; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animlib-slide-down {
+  animation-name: animlib-slide-down;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-/* Bounce Animation */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
+/* Scale Pulse */
+@keyframes animlib-scale-pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.08); opacity: 0.98; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animlib-scale-pulse {
+  animation-name: animlib-scale-pulse;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-.bounce {
-  animation: bounce 1s infinite;
+/* Shake */
+@keyframes animlib-shake {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(-8px); }
+  30%  { transform: translateX(8px); }
+  45%  { transform: translateX(-6px); }
+  60%  { transform: translateX(6px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+.animlib-shake {
+  animation-name: animlib-shake;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-/* Rotate Animation */
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+/* Wobble */
+@keyframes animlib-wobble {
+  0%   { transform: translateX(0) rotate(0deg); }
+  20%  { transform: translateX(-8px) rotate(-3deg); }
+  40%  { transform: translateX(8px) rotate(3deg); }
+  60%  { transform: translateX(-6px) rotate(-2deg); }
+  80%  { transform: translateX(4px) rotate(1deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+.animlib-wobble {
+  animation-name: animlib-wobble;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
 
-.rotate {
-  animation: rotate 2s linear infinite;
+/* Rotate */
+@keyframes animlib-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animlib-rotate {
+  animation-name: animlib-rotate;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, linear);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+  transform-origin: center;
 }
 
-/* Scale Animation */
-@keyframes scale {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
+/* Flip (3D) */
+@keyframes animlib-flip {
+  0%   { transform: perspective(800px) rotateX(-90deg); opacity: 0; }
+  60%  { transform: perspective(800px) rotateX(20deg); opacity: 0.9; }
+  100% { transform: perspective(800px) rotateX(0deg); opacity: 1; }
+}
+.animlib-flip {
+  animation-name: animlib-flip;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+  backface-visibility: hidden;
+  transform-origin: center;
 }
 
-.scale {
-  animation: scale 1s ease-in-out infinite;
+/* Blur In */
+@keyframes animlib-blur-in {
+  0%   { filter: blur(8px); opacity: 0; transform: scale(0.99) translateY(6px); }
+  60%  { filter: blur(3px); opacity: 0.6; transform: scale(1.01) translateY(2px); }
+  100% { filter: blur(0px); opacity: 1; transform: scale(1) translateY(0); }
+}
+.animlib-blur-in {
+  animation-name: animlib-blur-in;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+  -webkit-backface-visibility: hidden;
+}
+
+/* Pop (pop-in with overshoot) */
+@keyframes animlib-pop {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animlib-pop {
+  animation-name: animlib-pop;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+}
+
+/* Bounce */
+@keyframes animlib-bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-30px); }
+  50%  { transform: translateY(8px); }
+  70%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.animlib-bounce {
+  animation-name: animlib-bounce;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+}
+
+/* Text underline / reveal (text-focused) */
+@keyframes animlib-text-underline {
+  0%   { opacity: 0; transform: translateY(6px); letter-spacing: 0px; }
+  40%  { opacity: 1; transform: translateY(0); letter-spacing: 1px; }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: 0px; }
+}
+.animlib-text-underline {
+  animation-name: animlib-text-underline;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
+}
+
+/* Fade Out */
+@keyframes animlib-fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(8px); }
+}
+.animlib-fade-out {
+  animation-name: animlib-fade-out;
+  animation-duration: var(--animlib-duration, 700ms);
+  animation-delay: var(--animlib-delay, 0ms);
+  animation-timing-function: var(--animlib-easing, ease-out);
+  animation-iteration-count: var(--animlib-iterations, 1);
+  animation-direction: var(--animlib-direction, normal);
+  animation-fill-mode: var(--animlib-fill, both);
 }
